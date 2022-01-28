@@ -1,0 +1,27 @@
+.x-text-field.v-input {
+
+	&.theme--light {
+		@apply text-gray-light;
+		@apply bg-gray-darkest;
+		@apply rounded-lg;
+	}
+
+	.v-input__control {
+
+		.v-input__slot {
+
+			label.v-label.theme--light {
+				@apply text-gray-light;
+			}
+		}
+	}
+	&.text-white {
+		.v-input__control {
+			.v-input__slot {	
+				input{
+					color: #fff;
+				}
+			}
+		}
+	}
+}

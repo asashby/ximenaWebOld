@@ -1,0 +1,61 @@
+.x-searcher {
+
+	&--field__desktop {
+		@apply flex;
+		@apply h-20 w-full;
+		@apply bg-black-darkest;
+		border-radius: 2rem;
+		max-width: 690px !important;
+
+		&.v-input {
+			@apply items-center;
+			.v-input__prepend-outer {
+				@apply my-0 ml-6;
+
+				.v-input__icon.v-input__icon--prepend {
+					i.v-icon {
+						@apply text-gray-light;
+						@apply text-opacity-50;
+					}
+				}
+			}
+
+			.v-input__control {
+					.v-input__slot {
+						@apply py-6;
+
+							.v-text-field__slot {
+								label {
+									@apply text-gray-light;
+								}
+
+								input {
+									@apply text-gray-light;
+								}
+								input::placeholder {
+									@apply font-bold;
+									@apply text-gray-light;
+									@apply text-opacity-50;
+								}
+								input:-internal-autofill-selected {
+									background-color: transparent !important;
+								}
+							}
+
+							.v-input__append-inner {
+								@apply mt-0;
+								@apply self-center;
+
+								.v-input__icon.v-input__icon--clear {
+									button.v-icon {
+										@apply text-3xl;
+										@apply text-gray-light;
+										@apply text-opacity-50;
+									}
+								}
+							}
+					}
+			}
+		}
+	}
+}

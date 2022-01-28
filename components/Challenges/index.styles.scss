@@ -1,0 +1,416 @@
+.challenges--banner {
+	@apply w-full h-full;
+
+	&-container__image {
+		@apply w-full h-full;
+
+		&-img {
+			@apply w-full h-full;
+			@apply object-cover;
+		}
+	}
+
+	&-container__title {
+		@apply flex items-center justify-center flex-col;
+		@apply absolute top-0 left-0;
+		@apply w-full h-full;		
+
+		h1 {
+			@apply text-gray-light;
+			@apply z-10;
+			@apply font-black text-4xl;
+		}
+
+		p {
+			@apply text-center;
+			@apply mt-2;
+			@apply text-gray-base;
+			@apply text-opacity-60;
+		}
+
+		@media screen and (min-width:600px) {
+			@apply items-start;
+			@apply pl-20;
+			h1 {
+				@apply font-black text-5xl;
+			}
+		}
+	}
+}
+
+.challenge-component--main-container {
+		@apply relative;
+		@apply mr-6;
+		min-height: $dimTarjetaRetos;
+		min-width: $dimTarjetaRetos;
+		max-width: 20rem;
+
+		@media screen and (min-width:600px) {
+			@apply mr-0;
+		}
+
+		.challenge-component {
+
+			&--img {
+				@apply object-cover;
+				@apply rounded-xl;
+				@apply w-full h-full;
+			}
+
+			&--img_container {
+				@apply w-full h-full relative;
+
+				&-opacity {
+					@apply rounded-xl w-full h-full absolute;
+					background-color: rgba(0, 0, 0, .38);
+					z-index: 1;
+				}
+			}
+
+			&--title {
+				@apply w-full h-full;
+				@apply absolute left-0 top-0 z-10;
+				@apply pb-4 pl-2;
+				@apply flex flex-col items-start justify-end;
+				@apply text-gray-light;
+
+				h3 {
+					@apply font-semibold;
+					font-size: 17px !important;
+					text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+				}
+
+				p {
+					@apply font-light text-sm;
+				}
+			}
+		}
+}
+
+.workout--banner {
+	@apply w-full;
+	height: 409px;
+	max-height: calc(100vh / 2);
+	position: relative;
+
+	&-img {
+		@apply w-full h-full;
+		@apply object-cover;
+	}
+}
+
+.introduction--main-container {
+	@apply bg-black-darkest;
+	@apply text-gray-light;
+	@apply rounded-2xl;
+	@apply py-10 px-4;
+	@apply flex flex-col justify-center items-center;
+
+	@media screen and (min-width: 600px) {
+		@apply grid grid-cols-2 gap-8;
+		@apply px-12;
+	}
+
+	.introduction-wrapper {
+		@apply flex flex-col justify-center items-center;
+
+		@media screen and (min-width:600px) {
+			@apply items-start;
+		}
+		.introduction {
+			&--pre-title {
+				@apply text-gray-light;
+			}
+
+			&--title-container {
+				@apply grid gap-4 items-center justify-start;
+				@apply pl-8 py-2;
+				@apply w-full;
+				grid-template-columns: 14.5rem 1fr;
+
+				@media screen and (min-width: 600px) {
+					@apply grid-cols-1;
+					@apply pl-0;
+				}
+
+				.introduction--link {
+					@apply block;
+
+					i.theme--light.v-icon {
+						@apply text-gray-light;
+					}
+
+					@media screen and (min-width: 600px) {
+						@apply hidden;
+					}
+				}
+
+				h1 {
+					@apply text-3xl font-bold;
+				}
+			}
+
+			&--sub-title {
+				@apply text-gray-light;
+			}
+		}
+	}
+
+	.introduction {
+		&--rating {
+			@apply w-full;
+			@apply flex items-center justify-center flex-col;
+			@apply py-3;
+
+			.v-rating {
+				@apply flex items-center justify-center;
+			}
+		}
+
+		&-btn {
+			@apply w-full;
+		}
+	}
+}
+
+.workouttime-container {
+	@apply border border-solid border-gray-light;
+	@apply rounded-xl;
+	@apply py-2 px-4;
+	@apply grid grid-cols-3 gap-2;
+	@apply mt-8 mb-4;
+
+	@media screen and (min-width:600px) {
+		@apply my-0;
+	}
+
+	div {
+		@apply flex flex-col items-center justify-start;
+
+		span {
+			@apply text-xl;
+		}
+
+		small {
+			@apply text-xs;
+		}
+	}
+}
+
+.workout-summary {
+	@apply text-gray-heavy text-center;
+	@apply px-4;
+}
+
+.workout-day--container {
+	@apply grid gap-4 items-center;
+	@apply bg-gray-light;
+	@apply rounded-lg;
+	@apply p-3;
+	grid-template-columns: 4rem 1fr 2.5rem;
+
+	.img {
+		@apply bg-gray-base;
+		@apply w-16 h-16;
+
+		img {
+			@apply w-full h-full;
+			@apply object-cover;
+		}
+	}
+
+	.description {
+		@apply grid;
+
+		label {
+			@apply text-gray-heavy text-sm font-bold;
+		}
+
+		h3 {
+			@apply font-bold text-black-darkest;
+		}
+	}
+
+	.done {
+		i.theme--light.v-icon {
+			@apply text-green-base;
+		}
+	}
+}
+
+.routine-day--container {
+	@apply grid gap-4 items-center;
+	@apply bg-gray-light;
+	@apply rounded-lg;
+	@apply p-3;
+	grid-template-columns: 4rem 1fr 2.5rem;
+
+	.img {
+		@apply w-16 h-16;
+
+		img {
+			@apply w-full h-full;
+			@apply object-cover;
+		}
+	}
+
+	.description {
+		@apply grid;
+
+		label {
+			@apply text-gray-heavy text-xs font-bold;
+		}
+
+		h3 {
+			@apply font-bold text-black-darkest;
+		}
+	}
+
+	.done {
+		i.theme--light.v-icon {
+			@apply text-green-base;
+		}
+	}
+}
+
+.routine-summary--main-container {
+	@apply grid;
+	@apply bg-black-darkest;
+	@apply rounded-2xl;
+	@apply px-2 py-6;
+	@apply text-gray-light;
+
+	@media screen and (min-width:600px) {
+		@apply grid-cols-2;
+	}
+
+	.routine-summary {
+		&-wrapper {
+			@apply flex flex-col justify-center items-center;
+
+			@media screen and (min-width:600px) {
+				@apply items-start;
+			}
+			.routine-summary {
+				&--pre-title {
+					@apply text-gray-light;
+
+					@media screen and (min-width: 600px) {
+						@apply ml-10;
+					}
+				}
+
+				&--title-container {
+					@apply grid gap-4 items-center justify-start;
+					@apply pl-8 py-2;
+					@apply w-full;
+					grid-template-columns: 3.5rem 1fr;
+
+					@media screen and (min-width: 600px) {
+						@apply pl-0;
+						grid-template-columns: 1.5rem 1fr;
+					}
+
+					.routine--link {
+						@apply block;
+
+						i.theme--light.v-icon {
+							@apply text-gray-light;
+						}
+					}
+
+					h1 {
+						@apply text-3xl font-bold;
+					}
+				}
+			}
+		}
+
+		&--working-time__container {
+			@apply grid grid-cols-2 gap-2;
+			@apply items-center justify-center;
+			@apply rounded-xl;
+			@apply border border-solid border-gray-light;
+			@apply p-2 mx-8 my-4;
+
+			@media screen and (min-width:600px) {
+				@apply -mb-1;
+			}
+
+			.working-time,
+			.rest-time {
+				@apply flex flex-col items-center;
+
+				h3 {
+					@apply text-xl;
+				}
+			}
+		}
+	}
+}
+
+.excercise-control--main-container {
+	@apply bg-gray-light;
+	@apply rounded-lg;
+	@apply px-6 py-3;
+	@apply grid grid-cols-2 gap-1;
+	@apply items-center;
+	@apply duration-100;
+
+	&.resting {
+		@apply bg-green-base;
+		@apply text-gray-light;
+
+		.check {
+			@apply bg-gray-light;
+		}
+	}
+
+	.right-side--container {
+		@apply justify-self-end;
+		@apply flex items-center;
+
+		.counter {
+			@apply text-3xl;
+		}
+
+		.check {
+			@apply border border-solid border-gray-heavy;
+			@apply rounded;
+			@apply ml-8;
+			@apply w-12 h-12;
+
+			.theme--light.v-icon {
+				@apply text-green-base;
+			}
+		}
+	}
+}
+
+.workout--container-btn-video {
+	align-items: center;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+.workout--btn-img {
+	height: 50px;
+}
+
+.workout--btn-video {
+	outline: none !important;
+}
+
+.separation-text {
+	display: inline-block;
+	margin: 0 5px;
+	top: -3px;
+	position: relative;
+	font-weight: 900;
+	font-size: 15px;
+}

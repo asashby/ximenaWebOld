@@ -1,0 +1,112 @@
+.modal--finished-workout {
+	@apply bg-gray-light;
+	@apply rounded-3xl;
+	@apply p-4 mx-auto;
+	max-width: 600px;
+
+	@media screen and (min-width:600px) {
+		@apply p-8;
+	}
+
+	&__close {
+		@apply flex items-center justify-end;
+		@apply mb-4;
+
+		.theme--light.v-icon {
+			@apply text-green-base;
+			@apply text-6xl;
+		}
+	}
+
+	&__title {
+		@apply text-black-base font-bold text-3xl;
+		@apply flex flex-col items-center justify-center;
+		@apply mb-6;
+
+		h3 {
+			@apply font-normal text-base;
+		}
+	}
+
+	&__summary {
+		@apply grid gap-4 grid-cols-2;
+		display: flex;
+		justify-content: center;
+
+		@media screen and (min-width:600px) {
+			@apply grid-cols-4
+		}
+
+		&-card {
+			@apply bg-gray-heavy bg-opacity-50;
+			@apply rounded-2xl;
+			@apply p-4;
+			@apply flex flex-col items-start justify-center;
+
+			.title-data {
+				@apply font-bold text-sm;
+				@apply mb-4;
+
+				&.orange-title {
+					color: #fe5712;
+				}
+
+				&.fucsia-title {
+					color: #fe375f;
+				}
+
+				&.green-title {
+					color: #30d38b;
+				}
+
+				&.yellow-title {
+					color: #da8c0d;
+				}
+			}
+
+			.numbers-unit {
+				@apply text-4xl font-bold;
+				@apply flex items-end;
+
+				span {
+					@apply text-xs font-normal;
+				}
+			}
+		}
+	}
+
+	&__rating {
+		@apply flex flex-col items-center;
+		@apply mt-8 mb-16;
+
+		h2 {
+			@apply font-bold text-xl;
+		}
+	}
+
+	&__btns {
+		@apply w-full;
+		@apply grid gap-4;
+
+		@media screen and (min-width:600px) {
+			@apply grid-cols-2;
+		}
+	}
+}
+
+.modal--meal-video {
+	@apply relative;
+	@apply w-full;
+
+	.close-video-modal {
+		@apply absolute top-0 right-0;
+		@apply w-8 h-8;
+		@apply rounded-full;
+		@apply border-2 border-solid border-gray-light;
+		@apply mr-1 mt-2;
+
+		.theme--light.v-icon {
+			@apply text-gray-light;
+		}
+	}
+}

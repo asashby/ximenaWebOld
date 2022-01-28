@@ -1,0 +1,69 @@
+button.x-btn {
+	@apply font-bold;
+	@apply rounded-lg;
+	@apply py-4 px-6;
+	@apply text-gray-light;
+
+	@media screen and (min-width: 600px) {
+		@apply border border-solid;
+	}
+
+	&__green {
+		@apply bg-green-base;
+		@apply border-green-base;
+		@apply duration-200;
+
+		@media screen and (min-width: 600px) {
+			@apply border border-solid;
+			@apply text-green-base;
+			@apply bg-transparent;
+
+			&:hover {
+				@apply bg-green-base;
+				@apply border-green-base;
+				@apply text-gray-light;
+			}
+		}
+	}
+
+	&__red {
+		@apply bg-red-base;
+		@apply border-red-base;
+
+		@media screen and (min-width: 600px) {
+			@apply border border-solid;
+			@apply text-red-base;
+			@apply bg-transparent;
+
+			&:hover {
+				@apply bg-red-base;
+				@apply border-red-base;
+				@apply text-gray-light;
+			}
+		}
+	}
+
+	&__aqua {
+		@apply bg-green-aqua;
+		@apply border-green-aqua;
+
+		@media screen and (min-width: 600px) {
+			@apply border border-solid;
+			@apply text-green-aqua;
+			@apply bg-transparent;
+
+			&:hover {
+				@apply bg-green-aqua;
+				@apply border-green-aqua;
+				@apply text-gray-light;
+			}
+		}
+	}
+
+	&[disabled] {
+		@apply cursor-not-allowed;
+		@apply bg-gray-base;
+		@apply border-gray-base;
+		@apply text-gray-heavy;
+	}
+}

@@ -1,0 +1,141 @@
+.x-selector.v-input.v-select {
+	max-width: 320px;
+	min-width: 250px;
+
+	.v-input__control {
+		min-height: 4rem;
+
+		.v-input__slot {
+			@apply bg-gray-light bg-opacity-10;
+
+			.v-select__slot {
+				label {
+					@apply text-gray-light;
+					@apply font-bold;
+				}
+
+				.v-select__selections {
+					.v-select__selection {
+						@apply text-gray-light;
+					}
+				}
+
+				.v-input__append-inner {
+					.v-input__icon {
+						i.v-icon {
+							@apply text-green-base;
+							@apply text-5xl;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.x-selector-wire.v-input.v-select {
+	@apply border border-solid border-green-base;
+	@apply rounded-2xl;
+	max-width: 220px;
+	min-width: 219px;
+
+	.v-input__control {
+		min-height: 60px;
+
+		.v-input__slot {
+			@apply bg-transparent;
+			padding-left: 2rem !important;
+			padding-right: 2rem !important;
+
+			.v-select__slot {
+				label {
+					@apply text-green-base;
+					@apply font-light;
+				}
+
+				.v-select__selections {
+					.v-select__selection {
+						@apply text-green-base;
+					}
+				}
+
+				.v-input__append-inner {
+					.v-input__icon {
+						i.v-icon {
+							@apply text-green-base;
+							@apply text-5xl;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.x-searcher {
+	&--btn__mobile {
+		@apply bg-green-base;
+		@apply rounded-full;
+		@apply w-16 h-16;
+		@apply z-0;
+
+		@media screen and (min-width: 600px) {
+			@apply hidden;
+		}
+	}
+
+	&--field__desktop {
+		@apply flex;
+		@apply h-20 w-full;
+		@apply bg-black-darkest;
+		border-radius: 2rem;
+		max-width: 690px;
+
+		&.v-input {
+			@apply items-center;
+			.v-input__prepend-outer {
+				@apply my-0 ml-6;
+
+				.v-input__icon.v-input__icon--prepend {
+					i.v-icon {
+						@apply text-gray-light;
+						@apply text-opacity-50;
+					}
+				}
+			}
+
+			.v-input__control {
+					.v-input__slot {
+						@apply py-6;
+
+							.v-text-field__slot {
+								label {
+									@apply text-gray-light;
+								}
+
+								input {
+									@apply text-gray-light;
+								}
+								input::placeholder {
+									@apply font-bold;
+									@apply text-gray-light;
+									@apply text-opacity-50;
+								}
+							}
+
+							.v-input__append-inner {
+								@apply mt-0;
+
+								.v-input__icon.v-input__icon--clear {
+									button.v-icon {
+										@apply text-3xl;
+										@apply text-gray-light;
+										@apply text-opacity-50;
+									}
+								}
+							}
+					}
+			}
+		}
+	}
+}

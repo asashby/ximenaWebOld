@@ -1,0 +1,41 @@
+.v-application {
+	.x-radio-button-group {
+		@apply mt-0 pt-0;
+		max-width: 320px;
+		min-width: 250px;
+
+		.v-input__control {
+			.v-input__slot {
+				.v-input--radio-group__input {
+					.v-radio {
+						@apply bg-gray-light bg-opacity-10;
+						@apply py-5 px-5;
+						@apply rounded-lg;
+
+						.v-input--selection-controls__input {
+							order: 2;
+
+							.v-icon {
+								@apply text-gray-light;
+							}
+						}
+
+						label {
+							@apply text-gray-light;
+							@apply font-bold;
+						}
+
+						&.v-item--active {
+							.v-input--selection-controls__input {
+								.v-icon {
+									@apply text-green-base;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
